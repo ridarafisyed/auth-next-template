@@ -40,10 +40,10 @@ const SignupPageView = () => {
     
   };
   return (
-    <div className='rounded-md bg-zinc-800 px-6 py-6'>
-      <h1 className='text-center text-2xl p-4'>Sign Up</h1>
+    <div className='rounded-md dark:bg-slate-900 px-6 py-6 shadow-lg'>
+      <h1 className='text-center text-2xl p-4 text-violet-600 dark:text-violet-500'>Sign Up</h1>
         <form className='' onSubmit={handleSubmit}>
-        <div className='flex flex-col space-y-3 shadow-md '>
+        <div className='flex flex-col space-y-3 '>
           <input
             type="text"
             id="username"
@@ -51,7 +51,7 @@ const SignupPageView = () => {
             value={formData.username}
             onChange={handleChange}
             required
-            className="block w-full rounded-lg border-0 py-2 pl-7 pr-20 dark:text-gray-200 ring-1 ring-inset ring-zinc-800 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6"
+            className="block w-full rounded-lg border-0 py-2 pl-7 pr-20  dark:bg-slate-600 dark:text-slate-200 ring-1 ring-inset ring-slate-400 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6"
             placeholder='username' />
           {errors.username && <span className="error-message">{errors.username}</span>}
           <input
@@ -61,7 +61,7 @@ const SignupPageView = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="block w-full rounded-lg border-0 py-2 pl-7 pr-20 dark:text-gray-200 ring-1 ring-inset ring-zinc-800 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6"
+            className="block w-full rounded-lg border-0 py-2 pl-7 pr-20  dark:bg-slate-600 dark:text-slate-200 ring-1 ring-inset ring-slate-400 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6"
             placeholder='example@example.com' />
           {errors.email && <span className="error-message">{errors.email}</span>}
           <input
@@ -71,7 +71,7 @@ const SignupPageView = () => {
             value={formData.password}
             onChange={handleChange}
             required
-            className="block w-full rounded-lg border-0  pl-7 pr-20 dark:text-gray-200 ring-1 ring-inset ring-zinc-800 placeholder:text-gray-400 py-2 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6"
+            className="block w-full rounded-lg border-0 py-2 pl-7 pr-20  dark:bg-slate-600 dark:text-slate-200 ring-1 ring-inset ring-slate-400 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6"
             placeholder='password' />
           {errors.password && <span className="error-message">{errors.password}</span>}
           <input
@@ -81,10 +81,10 @@ const SignupPageView = () => {
             value={formData.confirmPassword}
             onChange={handleChange}
             required
-            className="block w-full rounded-lg border-0  pl-7 pr-20 dark:text-gray-200 ring-1 ring-inset ring-zinc-800 placeholder:text-gray-400 py-2 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6"
+            className="block w-full rounded-lg border-0 py-2 pl-7 pr-20  dark:bg-slate-600 dark:text-slate-200 ring-1 ring-inset ring-slate-400 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6"
             placeholder='Confirm Password' />
           {errors.confirmPassword && <span className="error-message">{errors.confirmPassword}</span>}
-          <button className="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 rounded-2xl py-2" type="submit" >Sing Up</button>
+          <button className="text-white bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 rounded-2xl py-2" type="submit" >Sing Up</button>
           </div>
       </form>
       {generalError && <p className="form-error">{generalError}</p>}

@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import React, { useState, FormEvent, ChangeEvent } from 'react'
-import { ValidDataType, FormDataType, ErrorDataType } from '../types/formTypes'
+import { FormDataType, ErrorDataType } from '../types/formTypes'
 import { validateForm } from '../utils/form'
 
 
@@ -43,10 +43,10 @@ const LoginPageView = () => {
   };
 
   return (
-    <div className='rounded-md bg-zinc-800 px-6 py-6'>
-      <h1 className='text-center text-2xl p-4'>Log In</h1>
+    <div className='rounded-md dark:bg-slate-900 px-6 py-6 shadow-lg'>
+      <h1 className='text-center text-violet-600 dark:text-violet-500 text-2xl p-4'>Log In</h1>
         <form className='' onSubmit={handleSubmit}>
-          <div className='flex flex-col space-y-3 shadow-md '>
+          <div className='flex flex-col space-y-3 '>
           <input
             type="email"
             id="email"
@@ -54,7 +54,7 @@ const LoginPageView = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="block w-full rounded-lg border-0 py-2 pl-7 pr-20 dark:text-gray-200 ring-1 ring-inset ring-zinc-800 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6"
+            className="block w-full rounded-lg border-0 py-2 pl-7 pr-20  dark:bg-slate-600 dark:text-slate-200 ring-1 ring-inset ring-slate-400 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6"
             placeholder='example@example.com' />
           {errors.email && <span className="error-message">{errors.email}</span>}
           <input
@@ -64,10 +64,10 @@ const LoginPageView = () => {
             value={formData.password}
             onChange={handleChange}
             required
-            className="block w-full rounded-lg border-0  pl-7 pr-20 dark:text-gray-200 ring-1 ring-inset ring-zinc-800 placeholder:text-gray-400 py-2 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6"
+            className="block w-full rounded-lg border-0 dark:bg-slate-600  pl-7 pr-20 dark:text-slate-200 ring-1 ring-inset ring-slate-400 placeholder:text-slate-400 py-2 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6"
             placeholder='password' />
           {generalError && <span className="error-message">{generalError}</span>}
-          <button className="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 rounded-2xl py-2" type="submit" >Log In</button>
+          <button className="text-white bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 rounded-2xl py-2" type="submit" >Log In</button>
 
           <Link href="#" className='text-xs font-light'>Forget Password?</Link>
           

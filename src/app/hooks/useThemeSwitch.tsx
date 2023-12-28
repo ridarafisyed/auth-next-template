@@ -1,7 +1,7 @@
-
+'use client'
 import { useTheme } from 'next-themes';
 
-const useThemeSwitch = () => {
+ const useThemeSwitch = () => {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
