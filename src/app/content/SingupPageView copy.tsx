@@ -21,7 +21,6 @@ const SignupPageView = () => {
       ...formData,
       [name]: value,
     });
-
     // Clear the associated error when the user starts typing
     setErrors({});
   };
@@ -30,8 +29,6 @@ const SignupPageView = () => {
     e.preventDefault();
     const errors = validateForm(formData)
     console.log(errors)
-    
-    
       try {
       // Your login logic here
       // For example, you might use formData.email and formData.password to make an API call
